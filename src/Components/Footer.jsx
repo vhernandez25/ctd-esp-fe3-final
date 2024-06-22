@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Footer = () => {
+function Footer() {
   return (
     <footer>
-        <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+      <p>&copy; 2023 Dental Clinic</p>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

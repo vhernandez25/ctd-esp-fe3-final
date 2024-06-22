@@ -1,122 +1,63 @@
+body.light {
+  --background: #ffffff;
+  --text-color: #000000;
+  --card-background: #f9f9f9;
+}
+
+body.dark {
+  --background: #333333;
+  --text-color: #ffffff;
+  --card-background: #444444;
+}
+
 body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.favButton{
-  background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-}
-
-h1{
+.App {
   text-align: center;
 }
 
-nav{
+.nav {
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: var(--card-background);
 }
 
-a{
-  color: #000;
-  text-decoration: none;
-  margin: 5px;
-  cursor: pointer;
+.home, .contact, .detail, .favs {
+  padding: 20px;
 }
-a:hover{
-  color: rgb(136, 136, 136);
-} 
+
+.dentist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.dentist-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--card-background);
+  position: relative;
+}
+
+.doctor-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
 
 footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  padding: 20px;
+  background-color: var(--card-background);
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
-
-.card{
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-}
-
-.card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
-}
-
-.card-grid{
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 90vw;
-  height: auto;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
-table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-.dark{
-  background-color: #12121296;
-  color: white;
-}
-.dark > a {
-  color: white;
+.error {
+  color: red;
 }
