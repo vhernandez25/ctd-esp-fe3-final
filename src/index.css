@@ -54,10 +54,38 @@ body {
 }
 
 footer {
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: var(--card-background);
+}
+
+.footer-left {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.footer-logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer-right {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.footer-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .error {
   color: red;
 }
+
